@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
                "Q2"=>"kosong",
                "Q3"=>"final"
                );
-    //Rules
+    //Transition Function
     $transition=array();
     $transition["Q1"]["a"] = "Q1";
     $transition["Q1"]["b"] = "Q1";
