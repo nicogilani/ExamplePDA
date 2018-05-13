@@ -11,7 +11,7 @@
     <form action="" method="post">
       <h2>PDA</h2>
       <div class="isian">
-        <label for="email">Masukan suku kata maksimal [20]</label>
+        <label for="email">Input the items max [20]</label>
         <br />
         <br />
         <input type="text" name="kata" value="" placeholder="Masukkan Bilangan">
@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
                "Q2"=>"kosong",
                "Q3"=>"final"
                );
-
+    //Rules
     $transition=array();
     $transition["Q1"]["a"] = "Q1";
     $transition["Q1"]["b"] = "Q1";
@@ -57,13 +57,13 @@ if(isset($_POST['submit'])){
     $kompileSatu = new latihan_pda($states,$transition);
     if ($kompileSatu->cek_input($input)) {?>
        <h3><?php echo $input; ?></h3>
-       <h1>Diterima!</h1>
+       <h1>Acceptable!</h1>
        <br />
-       <?php  echo "merupakan PDA" ?>
+       <?php  echo "are PDA" ?>
     <?php
     }else{ ?>
       <h3><?php echo $input; ?></h3>
-       <h1>Tidak diterima!</h1>
+       <h1>Not Acceptable!</h1>
        <br/>
        <?php  echo $kompileSatu->show_error();?>
     <?php
